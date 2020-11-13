@@ -61,6 +61,7 @@ class ListContact extends Component {
 
     // api get list contact
     getList(){
+        this.setState({isRefresh: true})
         let { actions } = this.props;
         let urlFetch = ENV.API_BASE_URL + `/contact`
         fetch(urlFetch,
